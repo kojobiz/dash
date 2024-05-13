@@ -108,6 +108,37 @@
                                 3-ftp (sftp)  infomation</p>
                         </div>
                     </li>
+                    <li>
+                        <h1 class='pb-3 pl-6 text-[#1B2559] text-sm'>本番環境 / 納品環境 / CP情報</h1>
+                        <div class='w-[256px] bg-white rounded-[20px] h-[334px] p-6'>
+                            <p class=" text-2xl pb-6">WordPress</p>
+                            <form id="inputForm">
+                                <label for="inputField" class="text-[#A3AED0]">Input</label><br>
+                                <input type="text" id="inputField" name="inputField"><br><br>
+                                <button type="button" onclick="displayInput()" class="rounded-full bg-pink-300 px-3">Submit</button>
+                            </form>
+                            <p id="displayArea" class="bg-white text-[#A3AED0] rounded-[20px] w-[100%]"></p>
+
+                            <p class="bg-white  text-[#A3AED0] rounded-[20px] w-[100%]">Browser<br/>
+                                <span class='text-light text-[1.3rem] text-[#1B2559] text-sm'>https://xxxxx/xxx</span><br>
+                                <span class='text-light text-[1.3rem] text-[#1B2559] text-sm'>ID/PASS  xxxx/xxxxx</span>
+                            </p><br>
+                            <p class="bg-white text-[#A3AED0] rounded-[20px] w-[100%]">Local<br/>
+                                <span class='text-light text-[1.3rem] text-[#1B2559] text-sm'>https://xxxxx/xxx</span><br>
+                                <span class='text-light text-[1.3rem] text-[#1B2559] text-sm'>ID/PASS  xxxx/xxxxx</span>
+                            </p><br>
+                            
+                            <br>
+                            <p class='text-sm'>CP情報control panel情報</p>
+                            <p class='text-sm'>
+                                1-control panel infomation<br>
+                                2-ftp (sftp), database infomation<br>
+                                3-ftp (sftp)  infomation</p>
+                        </div>
+                    </li>
+
+                    
+
                 </ul>
             </section>
             <section class="mt-20">
@@ -121,6 +152,13 @@
             </section>        
         </div>          
     </div>
-    
+    <script>
+        function displayInput() {
+            var inputText = document.getElementById("inputField").value;
+            var displayArea = document.getElementById("displayArea");
+            displayArea.innerHTML = "Input: " + inputText;
+        }
+        </script>
+        
 </body>
 </html>
